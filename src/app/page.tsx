@@ -1,9 +1,13 @@
-import { LoginForm } from "@/components/login-form";
+import Hero from "@/components/hero";
+import Navigation from "@/components/navigation/navigation";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-full items-center justify-center p-6 md:p-10">
-      <h1>Welcome to Better Auth Login</h1>
+    <main className="flex flex-col min-h-screen w-full mx-auto items-center">
+      
+      <section>
+        <Hero />
+      </section>
     </main>
   );
 }

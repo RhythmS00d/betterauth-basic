@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Image from "next/image"
 
 export function LoginForm({
   className,
@@ -17,6 +18,13 @@ export function LoginForm({
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
+        <Image
+          alt="butterauth logo"
+          src="/butter3.png"
+          width={180}
+          height={80}
+          className="mx-auto"
+        />
         <CardHeader>
           <CardTitle>Login to your account</CardTitle>
           <CardDescription>
