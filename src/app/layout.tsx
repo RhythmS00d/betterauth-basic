@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import Navigation from "@/components/navigation/navigation";
-import Image from "next/image";
 import { Toaster } from "sonner";
+import Image from "next/image";
+import Navigation from "@/components/navigation/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   title: "Better Auth Login",
   description: "Better Auth Login Page with user dashboard",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <Toaster position="top-right" expand={true} richColors className="z-10"/>
         <Image
           className="absolute z-[-1] right-0 opacity-55 top-0"
           alt="bg"
@@ -40,9 +38,15 @@ export default function RootLayout({
           height={2160}
         />
         <Navigation />
-        <main className="flex flex-col min-h-screen w-full mx-auto items-center">
+        <div className="flex flex-col min-h-screen w-full mx-auto items-center">
+          <Toaster
+            position="top-right"
+            expand={true}
+            richColors
+            className="z-10"
+          />
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );
