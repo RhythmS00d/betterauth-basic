@@ -20,18 +20,16 @@ export default function Hero() {
 
   return (
     <>
-      <Image
-        className="absolute z-[-1] right-0 opacity-55 top-0"
-        alt="bg"
-        src={"/squareBG.png"}
-        width={3840}
-        height={2160}
-      />
+      
       <div className="w-full">
         <div className="container mx-auto">
           <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
             <div>
-              <Button variant="secondary" size="sm" className="cursor-pointer bg-black text-white">
+              <Button
+                variant="secondary"
+                size="sm"
+                className="cursor-pointer bg-black text-white hover:bg-gray-800/70"
+              >
                 <Link href="/" className="flex items-center gap-2">
                   Read documentation <MoveRight className="w-4 h-4" />
                 </Link>
@@ -68,7 +66,7 @@ export default function Hero() {
               </p>
             </div>
             <div className="flex flex-row gap-3">
-              <Button size="lg" className="cursor-pointer">
+              <Button size="lg" className="cursor-pointer hover:bg-gray-800/70">
                 <Link href="/login" className="flex gap-2 items-center">
                   Login here <MoveRight className="w-4 h-4" />
                 </Link>

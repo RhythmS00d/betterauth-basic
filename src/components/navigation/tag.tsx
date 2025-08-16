@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default function Tag({ name }: { name: string }) {
+export default function Tag({ name, to }: { name: string, to: string }) {
   return (
     <span>
       <Link
-        href={name.toLowerCase() !== "home" ? `/${name.toLowerCase()}` : "/"}
+        href={`${to}`}
         className="relative px-3 py-1 rounded-md transition-colors duration-300
               before:absolute before:inset-0 before:rounded-md
               before:bg-gradient-to-r before:from-white/20 before:to-white/10

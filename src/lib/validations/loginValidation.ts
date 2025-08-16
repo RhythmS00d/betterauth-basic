@@ -1,7 +1,12 @@
 import * as z from "zod";
 
-const loginSchema = z.object({
-  email: z.string().includes("@"),
+export const loginSchema = z.object({
+  email: z
+    .string()
+    .regex(
+      /^[a-z0-9]+@[a-z]+\.[a-z]+(\.[a-z]+)?$/,
+      "Invalid email format"
+    ),
   password: z
     .string()
     .min(6, "Password must be at least 6 characters long")
