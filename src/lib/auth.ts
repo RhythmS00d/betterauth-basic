@@ -6,6 +6,6 @@ export const auth = betterAuth({
     enabled: true,
   },
   database: new Pool({
-    connectionString: "postgres://postgres:jojo00@localhost:5432/postgres",
+    connectionString: `postgres://${process.env.DATABASE_NAME}:${process.env.DATABASE_PASSWORD}@localhost:5432/postgres`,
   }),
 });
